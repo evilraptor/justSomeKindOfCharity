@@ -25,6 +25,7 @@ public class Main {
             Task tmp=listFromManager.get(i);
             System.out.println(tmp.getName()+"\n"+tmp.getDescription());
             if(tmp.isEpic()) {
+                System.out.println("List of Subtasks:");
                 List<Task> subtasksListOfTmp = tmp.getSubtasksList();
                 int SubtasksCountOfTmp=subtasksListOfTmp.size();//хочу показать разные варианты мб вам как-то удобнее будет с выводом писать
                 for (int j = 0; j < SubtasksCountOfTmp; j++){
