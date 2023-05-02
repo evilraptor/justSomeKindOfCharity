@@ -1,9 +1,7 @@
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class Manager {
-    //private Task tasksList[];//=new Task[1];
     private List<Task> taskList = new ArrayList<>();
     private int countOfTasks = 0;
 
