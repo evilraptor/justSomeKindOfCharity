@@ -14,10 +14,8 @@ public class Manager {
     }
 
     public Task getTaskById(int inputId) {
-        for (int i = 0; i <= taskList.size(); i++) {
-            if (taskList.get(i).getId() == inputId) return taskList.get(i);
-        }
-        return null;
+        if (taskList.containsKey(inputId)) return taskList.get(inputId);
+        else return null;
     }
 
     /*public void addTask(String inputName, String inputDescription, int inputId, String inputStatus) {
@@ -41,11 +39,6 @@ public class Manager {
     //FIXME возможно лишь возможно оно выглядит так??? здесь не понятно что делать если не было такого таска но я просто ретерню
 
     public void deleteTaskById(int inputId) {
-        for (int i = 0; i <= taskList.size(); i++) {
-            if (taskList.get(i).getId() == inputId) {
-                taskList.remove(i);
-                break;
-            }
-        }
+        if (taskList.containsKey(inputId)) taskList.remove(inputId);
     }
 }
