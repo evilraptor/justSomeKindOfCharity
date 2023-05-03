@@ -1,3 +1,5 @@
+package Tasks;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +11,7 @@ public class Task {
     private String status;
     private boolean isEpicFlag;
     private boolean isSubtaskFlag;
-    private List<Task> subtasksList = new ArrayList<>();
+    //private List<Task> subtasksList = new ArrayList<>();
     /**
      * можно реализовать через list_name.size но да ладно
      */
@@ -52,7 +54,7 @@ public class Task {
         isEpicFlag = inputIsEpic;
         isSubtaskFlag = inputIsSubtask;
         if (inputIsEpic && inputIsSubtask) {
-            System.out.println("Task can't be Epic and Subtask both... Task set as simple Task");
+            System.out.println("Tasks.Task can't be Epic and Subtask both... Tasks.Task set as simple Tasks.Task");
             isEpicFlag = false;
             isSubtaskFlag = false;
         }
@@ -114,20 +116,5 @@ public class Task {
 
     public void setSubtaskFlag(boolean subtaskFlag) {
         isSubtaskFlag = subtaskFlag;
-    }
-
-
-    public List<Task> getSubtasksList() {
-        if (isEpicFlag)
-            return subtasksList;
-        else
-            return null;
-    }
-
-    public void addSubtask(Task task) {
-        isEpicFlag=true;
-        subtasksList.add(countOfSubtasks, task);
-        countOfSubtasks++;
-        task.setSubtaskFlag(true);
     }
 }
